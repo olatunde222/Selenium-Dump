@@ -1,0 +1,26 @@
+package Twitter;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+public class TwitterClass {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+//		Initiating the Properties
+		System.setProperty("webdriver.gecko.driver", "C:\\selenium webdriver\\FireFoxDriver\\geckodriver.exe");
+	
+//		FirefoxOptions options = new FirefoxOptions();
+//		options.setLegacy(true);
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://twitter.com/");
+		
+		
+	}
+
+}

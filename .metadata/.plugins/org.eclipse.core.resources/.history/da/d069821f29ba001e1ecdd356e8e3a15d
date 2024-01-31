@@ -1,0 +1,76 @@
+package FirstSeleniumDemo;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Demo {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+//		Web-Driver path
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\ChromeDriver\\chromedriver-win64\\chromedriver.exe");
+
+//		Setting Chrome-Option
+		ChromeOptions cop = new ChromeOptions();
+		
+//		Binary Path
+		cop.setBinary("C:\\selenium webdriver\\ChromeDriver\\chrome-win64\\chrome.exe");
+
+		
+//		Setting Driver
+		WebDriver driver = new ChromeDriver(cop);
+		
+//		getting the URL
+		driver.get("https://www.facebook.com/signup");
+		
+//		Maximising the Screen to Full mode
+		driver.manage().window().maximize();
+		
+//		Searching the webElement with id = month 
+		WebElement month_1 = driver.findElement(By.id("month"));
+
+//		Selecting the month option 
+		Select optSelect = new Select(month_1);
+		
+//		Giving a pause time of 3ms
+		Thread.sleep(2000);
+
+//		Selecting a month from the options
+		optSelect.selectByVisibleText("Jan");
+		
+//		Searching the webElement with id = day 
+		WebElement day_1 = driver.findElement(By.id("day"));
+
+//		Selecting the Day option 
+		Select optSelect_2 = new Select(day_1);
+		
+//		Giving a pause time of 3ms
+		Thread.sleep(2000);
+
+//		Selecting a Day from the options
+		optSelect_2.selectByIndex(21);
+		
+//		Searching the webElement with id = Year 
+		WebElement  Year = driver.findElement(By.id("year"));
+
+//		Selecting the Day option 
+		Select Year_1 = new Select(Year);
+		
+//		Giving a pause time of 3ms
+		Thread.sleep(2000);
+
+//		Selecting a Day from the options
+		Year_1.selectByValue("2000");
+		
+////		QUITING the web-browser page.
+//		driver.quit();
+		
+	}
+
+}
+	

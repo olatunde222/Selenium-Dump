@@ -1,0 +1,34 @@
+package Twitter;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+public class TwitterClass {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+//		
+////		Initiating the Properties
+//		System.setProperty("webdriver.gecko.driver", "C:\\selenium webdriver\\FireFoxDriver\\geckodriver.exe");
+//		
+//		FirefoxOptions options = new FirefoxOptions();
+//		options.setLegacy(true);
+//		
+//		WebDriver driver = new FirefoxDriver();
+//		driver.get("https://twitter.com/");
+		
+		
+		System.out.println("Execution with desired capabilities");
+        DesiredCapabilities cap = DesiredCapabilities.firefox();
+        cap.setCapability("marionette", true);
+        WebDriver driver = new FirefoxDriver(cap);
+        driver.get("https://demoqa.com");
+        Thread.sleep(3000);
+        driver.quit();
+        System.out.println("Execution completed");
+	}
+
+}

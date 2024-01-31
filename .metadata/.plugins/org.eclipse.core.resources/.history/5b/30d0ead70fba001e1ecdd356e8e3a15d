@@ -1,0 +1,10 @@
+package Edureka;
+
+public class Seleniumcript {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

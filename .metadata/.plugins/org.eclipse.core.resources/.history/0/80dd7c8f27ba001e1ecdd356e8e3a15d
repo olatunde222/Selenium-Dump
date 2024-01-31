@@ -1,0 +1,30 @@
+package FirstSeleniumDemo;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.WebDriver;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		Web-Driver path
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\ChromeDriver\\chromedriver-win64\\chromedriver.exe");
+		
+//		Setting Chrome-Option
+		ChromeOptions cop = new ChromeOptions();
+		
+//		Binary Path
+		cop.setBinary("C:\\selenium webdriver\\ChromeDriver\\chrome-win64\\chrome.exe");
+
+		
+//		Setting Driver
+		WebDriver driver = new ChromeDriver(cop);
+		
+//		getting the URL
+		driver.get("https://www.facebook.com/signup");
+	}
+
+}
+	
